@@ -4,7 +4,7 @@ description: >-
   kubernetes
 ---
 
-# Principais comandos
+# Cheat Sheet
 
 ## Visão geral da saúde do ambiente
 
@@ -17,9 +17,7 @@ Uma das principais tarefas de um sysadmin é verificar a saúde do ambiente. Seg
 | kubectl get deployments | Estado dos "deployments" |
 | kubectl describe deployment &lt;nome&gt; | Obter dados detalhados de determinado deploy |
 
-## Iniciar localmente - minikube
+## 
 
-Para fins de estudo, você pode usar o kubernets localmente na sua estação de trabalho. Para isso, utilize o projeto do minikube.
 
-Para instalar o minikube, siga as orientações de
 
