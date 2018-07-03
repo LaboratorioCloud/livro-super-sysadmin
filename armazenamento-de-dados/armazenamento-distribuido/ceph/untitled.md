@@ -54,9 +54,17 @@ Armazene as credenciais geradas para consumo do S3:
 ```
 {% endhint %}
 
-## Criando Bucket com Python
+## Criando e utilizando Bucket com Python
 
 Para criar seu primeiro bucket com python, primeiramente precisaremos de utilizar o boto.
+
+{% hint style="info" %}
+```
+O  Boto é um pacote do Python que fornece interfaces 
+para o Amazon Web Services. Atualmente, todos os 
+recursos funcionam com o Python 2.6 e 2.7.
+```
+{% endhint %}
 
 #### CENTOS
 
@@ -98,4 +106,6 @@ Com o seu script criado agora é a hora de executa-lo:
 root@webpx01:~# python s3test.py
 nome_bucket 2018-07-02T21:38:06.162Z
 ```
+
+
 
