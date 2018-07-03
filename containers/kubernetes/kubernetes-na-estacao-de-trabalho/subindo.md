@@ -62,7 +62,20 @@ Machine stopped.
 
 
 
+Um recurso MUITO útil é o dashboard \(web ui\) nativo do Kubernetes. No caso do minikube, para iniciar e acessar o dashboard execute:
 
+```text
+$ minikube dashboard
+```
+
+Você receberá um retorno parecido com esse:
+
+```text
+$ minikube dashboard
+Opening kubernetes dashboard in default browser...
+```
+
+No seu browser, será aberto o respectivo dashboard.
 
 
 
@@ -71,10 +84,11 @@ Machine stopped.
 ### Resumindo
 
 | **Comando** | **Descrição** |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | minikube start | Iniciar o Kubernetes localmente. |
 | minikube status | Obter o status do Kubernetes que está rodando localmente. |
 | minikube stop | Parar o Kubernetes localmente. |
+| minikube dashboard | Inicia e apresenta o dashboard web do Kubernetes |
 
 
 
