@@ -75,7 +75,9 @@ $ minikube dashboard
 Opening kubernetes dashboard in default browser...
 ```
 
-No seu browser, será aberto o respectivo dashboard.
+No seu browser, será aberto o respectivo dashboard. Será algo semelhante a:
+
+![](../../../.gitbook/assets/screen-shot-2018-07-03-at-19.29.36.png)
 
 
 
