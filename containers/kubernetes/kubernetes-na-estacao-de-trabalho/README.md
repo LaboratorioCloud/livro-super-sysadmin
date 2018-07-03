@@ -18,7 +18,7 @@ Resumindo...
 
 Trata-se de um projeto mantido pelo próprio Kubernetes. De uma forma simples, o minikube server para rodar um cluster de Kubernetes de apenas um nó na sua estação de trabalho.
 
-Para instalar, utilize o procedimento oficial do projeto, que pode ser acessado aqui: [https://github.com/kubernetes/minikube/releases](https://github.com/kubernetes/minikube/releases).
+Para instalar, utilize o procedimento oficial do projeto, que pode ser acessado aqui: [https://github.com/kubernetes/minikube/](https://github.com/kubernetes/minikube).
 
 Basicamente, o minikube irá usar o seu sistema nativo de virtualização \(exemplo: Virtualbox\) para poder rodar uma VM e, dentro dela, instalar o necessário para poder rodar um Kubernetes.
 

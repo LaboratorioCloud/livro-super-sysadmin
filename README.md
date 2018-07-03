@@ -8,3 +8,11 @@ O livro "Sysadmin de alta performance" está frequentemente em evolução. Pode 
 
 Nosso objetivo aqui não é, de forma alguma, exaurir todos os assuntos relacionados à rotina e ferramental de um sysadmin moderno - sabemos que isso seria uma tarefa um tanto penosa e árdua. Antes, a idéia, é simples: Concentrar e organizar o que mais utilizanos no nosso dia de trabalho. Para facilitar o estudo e a passagem de conhecimento.
 
+{% hint style="danger" %}
+Por favor, se encontrar qualquer erro ou se quiser contribuir com alguma melhoria, abra um PR diretamente no repositorio do github.
+
+Agradecemos antecipadamente!!!!!
+{% endhint %}
+
+
+
