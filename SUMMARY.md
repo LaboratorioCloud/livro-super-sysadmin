@@ -6,7 +6,7 @@
     * [Cheat Sheet](containers/kubernetes/principais-comandos.md)
     * [Na estação de trabalho?](containers/kubernetes/kubernetes-na-estacao-de-trabalho/README.md)
       * [Subindo!!](containers/kubernetes/kubernetes-na-estacao-de-trabalho/subindo.md)
-      * [Utilizando \(parte 1\)](containers/kubernetes/kubernetes-na-estacao-de-trabalho/utilizando-parte-1.md)
+      * [Testando...](containers/kubernetes/kubernetes-na-estacao-de-trabalho/utilizando-parte-1.md)
 * [Armazenamento de dados](armazenamento-de-dados/README.md)
   * [Armazenamento distribuído](armazenamento-de-dados/armazenamento-distribuido/README.md)
     * [CEPH](armazenamento-de-dados/armazenamento-distribuido/ceph/README.md)
