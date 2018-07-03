@@ -49,48 +49,5 @@ Segue retorno após criação:
 }
 ```
 
-## Criando Bucket com Python
 
-Para criar seu primeiro bucket com python, primeiramente precisaremos de utilizar o boto.
-
-#### CENTOS
-
-```
-$ sudo yum install python-boto -y
-```
-
-#### UBUNTU/DEBIAN
-
-```
-$ sudo apt-get install python-boto/xenial -y
-```
-
-Criei um script chamado **s3test.py** e insira as seguintes linhas, lembrando que deve-se inserir suas credenciais.
-
-```
-import boto.s3.connection
-
-access_key = '0MPINSZ803F2TRWP3TDE'
-secret_key = 'DxntFGnUg6ylQSeftdVWdPEOnjooVbNHw2zj5qMK'
-conn = boto.connect_s3(
-        aws_access_key_id=access_key,
-        aws_secret_access_key=secret_key,
-        host='<ip_cephmon01>', port=7480,
-        is_secure=False, calling_format=boto.s3.connection.OrdinaryCallingFormat(),
-       )
-
-bucket = conn.create_bucket('nome_bucket')
-for bucket in conn.get_all_buckets():
-    print "{name} {created}".format(
-        name=bucket.name,
-        created=bucket.creation_date,
-    )
-```
-
-Com o seu script criado agora é a hora de executa-lo:
-
-```
-root@webpx01:~# python s3test.py
-nome_bucket 2018-07-02T21:38:06.162Z
-```
 
