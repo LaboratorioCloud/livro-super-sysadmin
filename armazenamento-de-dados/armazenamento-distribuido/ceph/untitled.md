@@ -107,5 +107,30 @@ root@webpx01:~# python s3test.py
 nome_bucket 2018-07-02T21:38:06.162Z
 ```
 
+Criando script para consultar os buckets existentes:
+
+```
+import boto.s3.connection
+
+access_key = '0MPINSZ803F2TRWP3TDE'
+secret_key = 'DxntFGnUg6ylQSeftdVWdPEOnjooVbNHw2zj5qMK'
+conn = boto.connect_s3(
+            aws_access_key_id=access_key,
+            aws_secret_access_key=secret_key,
+            host='<ip_cephmon01>', port=7480,
+            is_secure=False, calling_format=boto.s3.connection.OrdinaryCallingFormat(),
+            )
+
+bucket = conn.get_all_buckets()
+print ("Segues buckets existentes: ", bucket)
+```
+
+Execute o script e verifique se seu bucket foi criado com sucesso:
+
+```
+root@sk8admin:~# python s3list.py
+('Segues buckets existentes: ', [])
+```
+
 
 
