@@ -28,3 +28,7 @@
 | Disk Space | 1 MB per daemon |
 | Network | 2x 1GB Ethernet NICs |
 
+{% hint style="info" %}
+Se você estiver executando um OSD com um único disco, crie uma partição para o armazenamento de volume separada da partição que contém o sistema operacional.
+{% endhint %}
+
