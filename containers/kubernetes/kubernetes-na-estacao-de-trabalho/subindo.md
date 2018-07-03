@@ -4,9 +4,77 @@ description: 'Ok, vamos subir nosso primeiro Kubernetes?'
 
 # Subindo!!
 
-## Iniciar localmente - minikube
+## Minikube
 
-Para fins de estudo, você pode usar o kubernets localmente na sua estação de trabalho. Para isso, utilize o projeto do minikube \(Você deve já ter visto isso na seção [anterior](./).
+Para fins de estudo, você pode usar o kubernets localmente na sua estação de trabalho. Para isso, utilize o projeto do minikube \(Você deve já ter visto isso na seção [anterior](./)\).
+
+E como **iniciar** o minikube? Muito simples!!! Veja:
+
+```bash
+$ minikube start
+```
+
+Exemplo de retorno:
+
+```text
+$ minikube start
+Starting local Kubernetes v1.10.0 cluster...
+Starting VM...
+Getting VM IP address...
+Moving files into cluster...
+Setting up certs...
+Connecting to cluster...
+Setting up kubeconfig...
+Starting cluster components...
+Kubectl is now configured to use the cluster.
+Loading cached images from config file.
+
+```
+
+Para verificar o **status** do cluster, execute o comando:
+
+```text
+$ minikube status
+```
+
+Exemplo de retorno:
+
+```text
+$ minikube status
+minikube: Running
+cluster: Running
+kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.100
+```
+
+E para **parar** o minikube:
+
+```text
+$ minikube stop
+```
+
+Exemplo de retorno:
+
+```text
+$ minikube stop
+Stopping local Kubernetes cluster...
+Machine stopped.
+```
+
+
+
+
+
+
+
+
+
+### Resumindo
+
+| **Comando** | **Descrição** |
+| --- | --- | --- | --- |
+| minikube start | Iniciar o Kubernetes localmente. |
+| minikube status | Obter o status do Kubernetes que está rodando localmente. |
+| minikube stop | Parar o Kubernetes localmente. |
 
 
 
