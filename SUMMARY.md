@@ -2,7 +2,6 @@
 
 * [Initial page](README.md)
 * [CEPH](ceph/README.md)
-  * [Configurações de Hardware](ceph/configurando-seu-primeiro-cluster.md)
   * [Principais comandos](ceph/principais-comandos.md)
   * [CEPH como S3?](ceph/untitled.md)
   * [CEPH como SWIFT?](ceph/ceph-como-swift.md)
