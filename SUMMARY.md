@@ -14,5 +14,8 @@
       * [Principais comandos](armazenamento-de-dados/armazenamento-distribuido/ceph/principais-comandos.md)
       * [CEPH como S3?](armazenamento-de-dados/armazenamento-distribuido/ceph/untitled.md)
       * [CEPH como SWIFT?](armazenamento-de-dados/armazenamento-distribuido/ceph/ceph-como-swift.md)
-* [Orquestradores](orquestradores.md)
+* [Orquestradores](orquestradores/README.md)
+  * [Ansible](orquestradores/ansible/README.md)
+    * [Cheat Sheet](orquestradores/ansible/cheat-sheet.md)
+    * [Provisionando ambientes](orquestradores/ansible/provisionando-ambientes.md)
 
