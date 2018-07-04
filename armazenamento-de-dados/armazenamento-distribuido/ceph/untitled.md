@@ -171,3 +171,39 @@ root@webpx01:~# python s3keys.py
 <Key: bucket,alternatives/aclocal> STANDARD
 ```
 
+### Inserindo objetos no Bucket
+
+Criando script chamado **s3upload.py** para inserir objetos no  bucket e validar se de fato foi criado:
+
+```
+import boto.s3.connection
+import boto
+from boto.s3.key import Key
+
+access_key = '0MPINSZ803F2TRWP3TDE'
+secret_key = 'DxntFGnUg6ylQSeftdVWdPEOnjooVbNHw2zj5qMK'
+filename = '/diretorio/nome_arquivo'                
+uploaded_filename = 'diretorio/nome_arquivo'
+conn = boto.connect_s3(
+            aws_access_key_id=access_key,
+            aws_secret_access_key=secret_key,
+            host='<ip_cephmon01>', port=7480,
+            is_secure=False, calling_format=boto.s3.connection.OrdinaryCallingFormat(),
+            )
+
+mybucket = conn.get_bucket('nome_bucket')
+k = Key(mybucket)
+k.key = uploaded_filename
+k.set_contents_from_filename(filename)
+print mybucket.get_key('diretorio/nome_arquivo')
+```
+
+Execute o script e verifique o objeto no bucket:
+
+```
+root@webpx01:~# python s3upload.py
+<Key: bucket,opt/teste_dentro_do_nfs>
+```
+
+
+
