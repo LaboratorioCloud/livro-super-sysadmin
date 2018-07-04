@@ -72,9 +72,40 @@ Vamos avaliar os dois modos...
 
 ### OPÇÃO 1: Indicando o namespace por meio de parâmetro
 
-TODO: descrever
+Quando passamos o namespace como parâmetro do comando kubectl estamos indicando ao kubectl a executar a determinada tarefa naquele determinado namespace. Exemplos: 
+
+```text
+# criar um namespace novo (ou use um existente )
+$ kubectl create namespace exemplo-1
+
+# Por exemplo, iniciar um nginx no namespace exemplo-1
+$ kubectl --namespace=exemplo-1 run nginx --image=nginx
+
+# Novamente, como exemplo, listar os podsiniciar veri
+$ kubectl --namespace=exemplo-1 get pods
+```
+
+O ponto positivo é que você pode indicar o namespace que deseja executar determinada ação/admintração. O ponto negativo, é justamente você esquecer de passar o namespace... Neste sentido, se você esquecer de passar o namespace como parâmetro, a ação será executada no namespace default... naturalmente.
 
 ### OPÇÃO 2: Alterando o contexto 
 
-TODO: descrever
+A outra forma de você aplicar a ação / administrar o namespace é alterando a configuração de contexto do kubectl.
+
+Para fazer tal configuração, faça assim:
+
+```text
+$ kubectl config set-context $(kubectl config current-context) --namespace=exemplo-1
+```
+
+No exemplo acima, novamente, utilizamos o nome do contexto como sendo "exemplo-1". Claro que você deverá alterar isso conforme a sua real necessidade.
+
+Para você ver qual é o contexto de namespace que o seu kubectl está configurado, execute:
+
+```text
+$ kubectl config view | grep namespace:
+```
+
+O comando acima irá retornar para você a configuração corrente de namespace. Se não aparecer nada, indica que você está usando o namespace default.
+
+O ponto positivo é justamente não ter que ficar passando o namespace como parâmetro a todo momento; mas, o ponto negativo é você esquecer em que namespace está trabalhando. Dessa forma, **recomendamos que você sempre verifique seu namespace atual.**
 
