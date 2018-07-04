@@ -16,6 +16,6 @@
       * [CEPH como SWIFT?](armazenamento-de-dados/armazenamento-distribuido/ceph/ceph-como-swift.md)
 * [Orquestradores](orquestradores/README.md)
   * [Ansible](orquestradores/ansible/README.md)
-    * [Cheat Sheet](orquestradores/ansible/cheat-sheet.md)
+    * [O que é ansible?](orquestradores/ansible/o-que-e-ansible.md)
     * [Provisionando ambientes](orquestradores/ansible/provisionando-ambientes.md)
 
