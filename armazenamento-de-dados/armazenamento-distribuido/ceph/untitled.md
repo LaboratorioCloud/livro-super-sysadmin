@@ -56,7 +56,7 @@ Armazene as credenciais geradas para consumo do S3:
 
 ## Criando e utilizando Bucket com Python
 
-Para criar seu primeiro bucket com python, primeiramente precisaremos de utilizar o boto.
+Para criar seu primeiro bucket com python, primeiramente precisaremos de utilizar o boto3 ou boto2.
 
 {% hint style="info" %}
 ```
@@ -79,6 +79,14 @@ $ sudo apt-get install python-boto/xenial -y
 ```
 
 ### Criando o primeiro Bucket
+
+{% hint style="warning" %}
+```
+Os códigos abaixos foram executados na versão do boto2
+Segue documentação oficial: 
+www.boto.cloudhackers.com/en/latest/s3_tut.html
+```
+{% endhint %}
 
 Criei um script chamado **s3test.py** e insira as seguintes linhas, lembrando que deve-se inserir suas credenciais.
 
