@@ -78,6 +78,8 @@ $ sudo yum install python-boto -y
 $ sudo apt-get install python-boto/xenial -y
 ```
 
+### Criando o primeiro Bucket
+
 Criei um script chamado **s3test.py** e insira as seguintes linhas, lembrando que deve-se inserir suas credenciais.
 
 ```
@@ -107,7 +109,9 @@ root@webpx01:~# python s3test.py
 nome_bucket 2018-07-02T21:38:06.162Z
 ```
 
-Criando script para consultar os buckets existentes:
+### Listando os Buckets
+
+Criando script chamado **s3list.py** para listar os buckets existentes:
 
 ```
 import boto.s3.connection
@@ -128,9 +132,42 @@ print ("Segues buckets existentes: ", bucket)
 Execute o script e verifique se seu bucket foi criado com sucesso:
 
 ```
-root@sk8admin:~# python s3list.py
+root@webpx01:~# python s3list.py
 ('Segues buckets existentes: ', [])
 ```
 
+### Listando os objetos existentes no Buckets
 
+Criando script chamado **s3keys.py** para consultar os objetos existentes no existentes:
+
+```
+import boto.s3.connection
+import boto.s3.key
+
+access_key = '0MPINSZ803F2TRWP3TDE'
+secret_key = 'DxntFGnUg6ylQSeftdVWdPEOnjooVbNHw2zj5qMK'
+conn = boto.connect_s3(
+            aws_access_key_id=access_key,
+            aws_secret_access_key=secret_key,
+            host='<ip_cephmon01>', port=7480,
+            is_secure=False, calling_format=boto.s3.connection.OrdinaryCallingFormat(),
+            )
+
+mybucket = conn.get_bucket('nome_bucket')
+for key in mybucket.list():
+  print key, key.storage_class
+```
+
+Execute o script e verifique os objetos no seu bucket:
+
+```
+root@webpx01:~# python s3keys.py
+<Key: bucket,NetworkManager/dispatcher.d/hook-network-manager> STANDARD
+<Key: bucket,X11/Xsession.d/60xdg-user-dirs-update> STANDARD
+<Key: bucket,acpi/events/powerbtn> STANDARD
+<Key: bucket,acpi/powerbtn.sh> STANDARD
+<Key: bucket,adduser.conf> STANDARD
+<Key: bucket,alternatives/README> STANDARD
+<Key: bucket,alternatives/aclocal> STANDARD
+```
 
